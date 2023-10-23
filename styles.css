@@ -1,0 +1,234 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap);
+
+* {
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+/* Eliminando Marca D'agua */
+body div{
+	opacity: 0
+}
+
+main div{
+	opacity: 1;
+}
+
+/* Classes Aplicaveis ou Gerais */
+.slide--horizontal {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100%;
+}
+
+/* Efeito de Aparecer onScroll */
+#reveal {
+	opacity: 0;
+}
+
+#reveal.visible {
+	opacity: 1;
+}
+
+/* Efeito de sticky para o header */
+.sticky {
+	background-color: transparent;
+}
+
+/* Separador */
+.separator {
+	width: 100%;
+	height: 200px;
+	background-color: #111;
+	background-attachment: fixed;
+}
+
+/* Header */
+header {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100px;
+	width: 100%;
+	z-index: 99;
+	color: #fff;
+	background-color: hsl(155, 54%, 18%, 0.8);
+	transition: 0.4s all ease;
+}
+
+/* Footer */
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #000;
+	color: #fff;
+	min-height: 100px;
+	position: relative;
+	z-index: 99;
+}
+
+/* body */
+body:hover {
+	cursor: url(https://cur.cursors-4u.net/games/gam-4/gam375.cur), auto;
+}
+
+/* Classes Específicas */
+
+/* Introdução */
+.intro {
+	background-image: url("https://personacentral.com/wp-content/uploads/2016/01/Toyoi-8Bit-Odin-Sphere.gif");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.into--text h1 {
+	font-family: "Press Start 2P", cursive;
+	font-size: 3.5rem; /* Tamanho da fonte */
+	text-transform: uppercase; /* Transformar todo o texto em maiúsculas */
+	letter-spacing: 4px; /* Espaçamento entre as letras */
+	color: #fff; /* Cor do texto */
+	text-shadow: 3px 3px 0 #000, -3px -3px 0 #000; /* Sombreamento de texto */
+	text-align: center;
+	animation: blink 1.5s infinite;
+}
+
+.intro--btn {
+	background-color: transparent;
+	border: none;
+	font-family: "Press Start 2P", cursive;
+	font-size: 1.2rem;
+	text-transform: uppercase; /* Transformar todo o texto em maiúsculas */
+	letter-spacing: 4px; /* Espaçamento entre as letras */
+	color: #fff; /* Cor do texto */
+	text-shadow: 3px 3px 0 #000, -3px -3px 0 #000; /* Sombreamento de texto */
+	cursor: pointer;
+	margin-top: 50px;
+}
+
+/* Apresentação */
+.about {
+	/* flex-direction: row; */
+	align-items: flex-start;
+	/* justify-content: space-evenly; */
+}
+
+.about > .separator {
+	height: 100px;
+}
+
+.onAbout {
+	color: #fff;
+	text-align: center;
+	transition: 0.6s all;
+	width: 100%;
+	flex-direction: row;
+}
+
+.onAbout.left--side > .about--img {
+	height: 100vh;
+	width: 100%;
+	background-image: url("./public/img/adventures.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+}
+
+.onAbout.right--side > .about--img {
+	height: 100vh;
+	width: 100%;
+	background-image: url("./public/img/dragon\ bg.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+}
+
+.onAbout.left--side {
+	background-color: hsla(149, 48%, 19%);
+}
+
+.onAbout.right--side {
+	background-color: #193347;
+	align-self: flex-end;
+	flex-direction: row-reverse;
+}
+
+.about--text {
+	transition: 0.8s all;
+	padding: 0 30px;
+	min-width: 100%;
+}
+
+.about--text h2 {
+	font-family: "Press Start 2P";
+	margin-bottom: 10px;
+}
+
+.about--text > p > a {
+	color: #54dbf0;
+}
+
+.about--text > button {
+	height: 50px;
+	width: 200px;
+	margin-top: 10px;
+	border-top-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background-color: transparent;
+	border: 1px solid #fff;
+	box-shadow: 1px 1px 1px #fff;
+	transition: 0.4s all ease;
+	cursor: pointer;
+	color: #fff;
+}
+
+.about--text > button:hover {
+	transform: translateY(-2px);
+	background-color: #296b75;
+	border: #54dbf0;
+}
+
+.about--text > button:active {
+	transform: translateY(4px);
+	background-color: #296b75;
+	border: #54dbf0;
+}
+
+/* Efeitos */
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+	.into--text h1 {
+		font-size: 1.5rem;
+	}
+
+	.about {
+		align-items: center;
+	}
+
+	.into--text h1{
+		line-height: 2;
+	}
+}

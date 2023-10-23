@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Guilda Universitária</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <main>
+        <header class="sticky">Aqui vai ter um Cabeçalho</header>
+
+        <!-- Introdução -->
+        <div class="intro slide--horizontal" id="pin">
+            <div class="into--text">
+                <h1>Bem-vindo à <br> Guilda Universitária</h1>
+            </div>
+            <a href="#about"><button class="intro--btn"> -> Vamos lá! </button></a>
+        </div>
+
+        <!-- Apresentação -->
+        <div class="about slide--horizontal" id="about">
+            <!-- Seção Separada para cada item -->
+            <div class="onAbout left--side slide--horizontal" id="pin">
+                <div class="about--text" id="reveal">
+                    <h2>Sobre a Guilda</h2>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eveniet animi iste quisquam. Nisi
+                        reprehenderit laudantium sunt, voluptas minima sequi! Molestias, dignissimos reiciendis sint
+                        nesciunt reprehenderit laboriosam tempore sunt asperiores?
+                        Inventore quod, harum nihil odio neque ipsam recusandae odit suscipit est, debitis veritatis,
+                        hic dicta expedita ratione esse quisquam? Quos animi veritatis nisi aliquam ullam eligendi quasi
+                        molestias similique culpa!</p>
+                    <br>
+                    <p>Inscreva-se em: <a href="#"> Futuro Link</a></p>
+                    <p>Instagram: <a href="#"> Futuro Link</a></p>
+                </div>
+                <div class="about--img">
+
+                </div>
+            </div>
+
+            <div class="onAbout right--side slide--horizontal" id="pin">
+                <div class="about--text" id="reveal">
+                    <h2>Já é aventureiro? Adentre na Lore!</h2>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsa cum molestias quam,
+                        quaerat,
+                        rerum, sit aut praesentium totam possimus odit quasi et. Beatae, voluptate sapiente dolorum quas
+                        quis necessitatibus.</p>
+                    <br>
+                    <button>Alguma coisa sobre entrar</button>
+                </div>
+                <div class="about--img">
+
+                </div>
+            </div>
+        </div>
+
+        <footer>Aqui vai ter um rodapé</footer>
+    </main>
+
+    <script src="./scripts.js"></script>
+
+    <!-- Addons -->
+
+    <!-- ScrollMagic -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script>
+        var controller = new ScrollMagic.Controller({
+            globalSceneOptions: {
+                triggerHook: 'onLeave',
+                duration: "200%" // this works just fine with duration 0 as well
+                // However with large numbers (>20) of pinned sections display errors can occur so every section should be unpinned once it's covered by the next section.
+                // Normally 100% would work for this, but here 200% is used, as Panel 3 is shown for more than 100% of scrollheight due to the pause.
+            }
+        });
+
+        document.querySelectorAll('#pin').forEach(elm => {
+            new ScrollMagic.Scene({
+                triggerElement: elm
+            })
+                .setPin(elm, { pushFollowers: false })
+                .addTo(controller);
+        })
+    </script>
+
+</body>
+</html>
