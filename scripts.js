@@ -23,7 +23,7 @@ document.addEventListener("scroll", () => {
 		}
 	});
 
-    /* Efeito de sticky no cabeçalho */
+	/* Efeito de sticky no cabeçalho */
 	const header = document.querySelector("header");
 	if (window.scrollY > 50) {
 		header.classList.remove("sticky");
@@ -31,3 +31,25 @@ document.addEventListener("scroll", () => {
 		header.classList.add("sticky");
 	}
 });
+
+/* Função de Genero */
+const letterSpan = document.querySelector('.intro--gen')
+// Array de letras para alternar (A, O, E)
+const letters = ["A", "O", "E"];
+
+// Variável para controlar o índice da letra atual
+let currentIndex = 0;
+
+// Função para alternar a letra
+function alternarLetra() {
+	letterSpan.textContent = letters[currentIndex];
+	currentIndex = (currentIndex + 1) % letters.length;
+}
+
+// Configura o temporizador para chamar a função a cada 2 segundos
+const intervalId = setInterval(alternarLetra, 3000);
+
+/* Trocar de Página */
+document.querySelector('.travel--btt').addEventListener('click', (elm) => {
+    window.location.href = "./public/lorePage/lore.html";
+})

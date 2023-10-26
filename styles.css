@@ -55,13 +55,51 @@ header {
 	position: fixed;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	min-height: 100px;
+	justify-content: space-evenly;
+	height: 100px;
 	width: 100%;
 	z-index: 99;
 	color: #fff;
 	background-color: hsl(155, 54%, 18%, 0.8);
 	transition: 0.4s all ease;
+}
+
+/* Configurações Específicas do Header */
+.header--logo{
+	width: 100%;
+}
+
+header.sticky > .header--logo img{
+	height: 300px;
+	margin-top: 220px;
+	margin-left: 300px;
+	transition: 0.4s all;
+}
+
+.header--logo img{
+	height: 80px;
+	margin-top: 10px;
+	margin-left: 300px;
+	transition: 0.4s all;
+}
+
+.header--text{
+	width: 100%;
+	text-align: center;
+	font-size: 1rem;
+}
+
+.header--text nav ul{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	list-style: none;
+}
+
+.header--text nav ul li a{
+	color: #fff;
+	font-family: 'Press Start 2P', cursive;
+	text-decoration: none;
 }
 
 /* Footer */
@@ -74,6 +112,17 @@ footer {
 	min-height: 100px;
 	position: relative;
 	z-index: 99;
+}
+
+/* Detalhes Footer */
+footer img{
+	height: 50px;
+	padding: 0px 10px;
+}
+
+footer p{
+	padding: 0px 20px 0px 0px;
+	text-align: center;
 }
 
 /* body */
@@ -113,6 +162,10 @@ body:hover {
 	text-shadow: 3px 3px 0 #000, -3px -3px 0 #000; /* Sombreamento de texto */
 	cursor: pointer;
 	margin-top: 50px;
+}
+
+.intro--gen{
+	font-family: inherit;
 }
 
 /* Apresentação */
@@ -230,5 +283,26 @@ body:hover {
 
 	.into--text h1{
 		line-height: 2;
+	}
+
+	header.sticky > .header--logo img{
+		height: 80px;
+		margin-top: 10px;
+		margin-left: 20px;
+		transition: 0.4s all;
+	}
+	
+	.header--logo img{
+		margin-left: 20px;
+		transition: 0.4s all;
+	}
+
+	.header--text{
+		font-size: 12px;
+		padding-right: 10px;
+	}
+
+	.header--text nav ul li{
+		margin: 0 10px;
 	}
 }

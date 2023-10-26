@@ -4,19 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Guilda Universitária</title>
+    <title>Guilda Universitária</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./public/img/Logo - Guilda Universitária.ico" type="image/x-icon">
 </head>
 
 <body>
 
     <main>
-        <header class="sticky">Aqui vai ter um Cabeçalho</header>
+        <header class="sticky">
+            <div class="header--logo">
+                <img src="./public/img/Logo - Guilda Universitária.png" alt="logo">
+            </div>
+            <div class="header--text">
+                <nav>
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#about">Sobre Nós</a></li>
+                        <li><a href="#story">História</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
         <!-- Introdução -->
         <div class="intro slide--horizontal" id="pin">
             <div class="into--text">
-                <h1>Bem-vindo à <br> Guilda Universitária</h1>
+                <h1>Bem-vind<span class="intro--gen">o</span> à <br> Guilda Universitária</h1>
             </div>
             <a href="#about"><button class="intro--btn"> -> Vamos lá! </button></a>
         </div>
@@ -28,15 +42,17 @@
                 <div class="about--text" id="reveal">
                     <h2>Sobre a Guilda</h2>
                     <br>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eveniet animi iste quisquam. Nisi
-                        reprehenderit laudantium sunt, voluptas minima sequi! Molestias, dignissimos reiciendis sint
-                        nesciunt reprehenderit laboriosam tempore sunt asperiores?
-                        Inventore quod, harum nihil odio neque ipsam recusandae odit suscipit est, debitis veritatis,
-                        hic dicta expedita ratione esse quisquam? Quos animi veritatis nisi aliquam ullam eligendi quasi
-                        molestias similique culpa!</p>
+                    <p>A Guilda Universitária é um refúgio de narradores, uma forja de histórias épicas e um reduto da
+                        sabedoria compartilhada. Convidamos você, audazes almas, a se juntarem a nós nesta jornada de
+                        descoberta, onde as maravilhas da exploração de mundos imaginários por meio do RPG se
+                        desdobrarão diante de nossos olhos como um tesouro inestimável a ser desvendado. Seja você um
+                        experiente veterano das mesas de RPG ou um recém-chegado ansioso por mergulhar em aventuras que
+                        desafiam os limites da imaginação, saiba que as portas da Guilda Universitária estão abertas
+                        para acolhê-lo</p>
                     <br>
-                    <p>Inscreva-se em: <a href="#"> Futuro Link</a></p>
-                    <p>Instagram: <a href="#"> Futuro Link</a></p>
+                    <p>Inscreva-se em: <a href="https://forms.gle/ELMjBmj6CbpmrxEb8">Inscrever</a></p>
+                    <p>Instagram (Agita Campus): <a
+                            href="https://instagram.com/agitacampus?igshid=MzRlODBiNWFlZA==">Para o Insta!</a></p>
                 </div>
                 <div class="about--img">
 
@@ -45,14 +61,14 @@
 
             <div class="onAbout right--side slide--horizontal" id="pin">
                 <div class="about--text" id="reveal">
-                    <h2>Já é aventureiro? Adentre na Lore!</h2>
+                    <h2 id="story">Já é aventureiro? Adentre na Lore!</h2>
                     <br>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsa cum molestias quam,
-                        quaerat,
-                        rerum, sit aut praesentium totam possimus odit quasi et. Beatae, voluptate sapiente dolorum quas
-                        quis necessitatibus.</p>
+                    <p>Conheça personagens, desbrave lugares, trace sua própria trajetória. <br>
+                        É aqui onde a lenda da Guilda dos Draconatos é contada. Qual será o desfecho
+                        desse conto onde cada passo que você dá, pode ser um marco, a tinta que rabisca a folha.
+                        A caneta é sua, que história deseja escrever?</p>
                     <br>
-                    <button>Alguma coisa sobre entrar</button>
+                    <button class="travel--btt">Um novo mundo te espera</button>
                 </div>
                 <div class="about--img">
 
@@ -60,7 +76,10 @@
             </div>
         </div>
 
-        <footer>Aqui vai ter um rodapé</footer>
+        <footer>
+            <img src="./public/img/Logo - Guilda Universitária.png" alt="logo">
+            <p>Guilda Universitária - Agita Campus - 2023</p>
+        </footer>
     </main>
 
     <script src="./scripts.js"></script>
@@ -90,4 +109,5 @@
     </script>
 
 </body>
+
 </html>

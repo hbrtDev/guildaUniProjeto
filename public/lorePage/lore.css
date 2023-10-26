@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap);
+
+* {
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+/* Classes Aplicaveis ou Gerais */
+.slide--horizontal {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100%;
+}
+
+main{
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7e757c61-f600-4009-9249-ab875e893c1e/d26c22t-453a4558-c053-49ae-8e09-1650e77a61aa.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdlNzU3YzYxLWY2MDAtNDAwOS05MjQ5LWFiODc1ZTg5M2MxZVwvZDI2YzIydC00NTNhNDU1OC1jMDUzLTQ5YWUtOGUwOS0xNjUwZTc3YTYxYWEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.mwt8XA-UvA0TqDC4k1JRWJvxjr3PjAPL1ZrwJqooBVc');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #111;
+}
