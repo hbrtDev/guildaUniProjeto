@@ -1,12 +1,52 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap);
 
+/* Fontes Personalizadas */
+@font-face {
+	font-family: "Great Victorian";
+	src: url("../fonts/greatvictorian/GreatVictorian-Swashed.otf");
+}
+
+@font-face {
+	font-family: 'Press-Jobs';
+	src: url("../fonts/press-jobs/PressJobs.ttf");
+}
+
+@font-face {
+	font-family: "Prida";
+	src: url("../fonts/prida01/Prida01Black.ttf");
+}
+
 * {
 	font-family: "Poppins", sans-serif;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
+}
+
+/* Footer */
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #000;
+	color: #fff;
+	min-height: 100px;
+	position: relative;
+	z-index: 99;
+	width: 100%;
+}
+
+/* Detalhes Footer */
+footer img {
+	height: 50px;
+	padding: 0px 10px;
+}
+
+footer p {
+	padding: 0px 20px 0px 0px;
+	text-align: center;
 }
 
 /* Classes Aplicaveis ou Gerais */
@@ -19,10 +59,69 @@
 	width: 100%;
 }
 
-main{
-    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7e757c61-f600-4009-9249-ab875e893c1e/d26c22t-453a4558-c053-49ae-8e09-1650e77a61aa.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdlNzU3YzYxLWY2MDAtNDAwOS05MjQ5LWFiODc1ZTg5M2MxZVwvZDI2YzIydC00NTNhNDU1OC1jMDUzLTQ5YWUtOGUwOS0xNjUwZTc3YTYxYWEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.mwt8XA-UvA0TqDC4k1JRWJvxjr3PjAPL1ZrwJqooBVc');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: #111;
+/* Intro */
+.lore--intro.slide--horizontal {
+	background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7e757c61-f600-4009-9249-ab875e893c1e/d26c22t-453a4558-c053-49ae-8e09-1650e77a61aa.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdlNzU3YzYxLWY2MDAtNDAwOS05MjQ5LWFiODc1ZTg5M2MxZVwvZDI2YzIydC00NTNhNDU1OC1jMDUzLTQ5YWUtOGUwOS0xNjUwZTc3YTYxYWEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.mwt8XA-UvA0TqDC4k1JRWJvxjr3PjAPL1ZrwJqooBVc");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	color: #111;
+}
+
+.lore--intro.slide--horizontal h2 {
+	font-family: "Great Victorian", cursive, sans-serif;
+	font-size: 80px;
+	color: #880808;
+	margin-top: 5%;
+	text-align: center;
+}
+
+.lore--intro.slide--horizontal .text {
+	padding: 0px 25%;
+	margin-bottom: 40px;
+}
+
+.lore--intro.slide--horizontal .text p {
+	margin: 10px 0px;
+	line-height: 50px;
+	font-size: 18px;
+	text-indent: 2em;
+	font-family: "Prida";
+	text-align: justify;
+}
+
+.lore--intro.slide--horizontal .text p span{
+	font-family: 'Great Victorian', cursive, sans-serif;
+	font-size: 100px;
+	color: #880808;
+	line-height: 100px;
+}
+
+.lore--intro.slide--horizontal .text p.sign{
+	font-family: Press-Jobs;
+	color: #880808;
+	font-size: 48px;
+	text-align: right;
+}
+
+.lore--intro.slide--horizontal .text p.sign img{
+	height: 120px;
+	width: 120px;
+}
+
+/* Smartphone */
+@media (max-width: 900px){
+	.lore--intro.slide--horizontal .text {
+		padding: 0px 10%;	
+		text-align: justify;
+	}
+
+	.lore--intro.slide--horizontal .text p.sign{
+		font-size: 40px;
+	}
+
+	.lore--intro.slide--horizontal .text p.sign img{
+		height: 60px;
+		width: 60px;
+	}
 }
