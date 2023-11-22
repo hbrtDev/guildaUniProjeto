@@ -71,8 +71,8 @@ header {
 
 header.sticky > .header--logo img{
 	height: 300px;
-	margin-top: 220px;
-	margin-left: 300px;
+	margin-left: 20%;
+	margin-top: 24vh;
 	transition: 0.4s all;
 }
 
@@ -84,9 +84,13 @@ header.sticky > .header--logo img{
 }
 
 .header--text{
+	height: 100%;
 	width: 100%;
 	text-align: center;
 	font-size: 1rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .header--text nav ul{
@@ -100,6 +104,8 @@ header.sticky > .header--logo img{
 	color: #fff;
 	font-family: 'Press Start 2P', cursive;
 	text-decoration: none;
+	margin-left: 20px;
+	text-align: center;
 }
 
 /* Footer */
@@ -272,7 +278,7 @@ body:hover {
 }
 
 /* Mobile */
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
 	.into--text h1 {
 		font-size: 1.5rem;
 	}
