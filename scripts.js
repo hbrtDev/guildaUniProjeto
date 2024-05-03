@@ -53,3 +53,7 @@ const intervalId = setInterval(alternarLetra, 3000);
 document.querySelector('.travel--btt').addEventListener('click', (elm) => {
     window.location.href = "./public/lorePage/lore.html";
 })
+
+document.querySelector('.tools--btn').addEventListener('click', (elm) => {
+    window.location.href = "./public/ferramentas/iniciativa/iniciativa.html";
+})

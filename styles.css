@@ -264,6 +264,12 @@ body:hover {
 	border: #54dbf0;
 }
 
+/* Ferramentas */
+.ferramentas--container .about--text{
+	text-align: justify;
+	line-height: 1.5;
+}
+
 /* Efeitos */
 @keyframes blink {
 	0% {

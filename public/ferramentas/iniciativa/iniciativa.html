@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicie a ativa - Ordenardor de Iniciativas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="icon.png" type="image/png">
+</head>
+
+<body>
+    <main>
+        <div class="intro--container">
+            <h1>Organize suas Iniciativas com <span>Maestria</span></h1>
+            <p class="subtitle"><span>Rolem Iniciativa! Porém, não esqueçam de organizar as iniciativas!</span></p>
+            <img src="https://media0.giphy.com/media/L17z6P1Aq70xIZS7xG/giphy.gif?cid=6c09b952b02l4txjzw088zbbbfj8agzuhsb9y6hlkcc2fyrl&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s"
+                alt="d20" />
+            <button class="startBtt">Vamos lá!</button>
+        </div>
+
+        <div class="app--configuration hidden">
+            <div class="config--header">
+                <h2>Insira seus participantes!</h2>
+            </div>
+            <div class="players--carousel">
+                <div class="add--player">
+                    <p>Clique aqui</p>
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                    <p>Para adicionar</p>
+                </div>
+
+            </div>
+
+            <div class="actions--btns">
+                <button class="edit--btn">Editar jogadores</button>
+                <button class="remove--btn">Remover jogadores</button>
+                <br>
+                <button class="organize--btn">Organizar jogadores! Para o combate!</button>
+            </div>
+
+            <div class="deletePlayer--container hidden">
+                <label for="delPlayer--input">Insira o nome da oferenda para os deuses!</label>
+                <input type="text" class="delPlayer--input" placeholder="Insira o nome da(o) Player que será apagado">
+                <button class="delete--player">Remover Jogador</button>
+            </div>
+        </div>
+
+        <footer></footer>
+    </main>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="vanilla-tilt.min.js"></script>
+
+    <!-- Inserindo o tilt para cada div .player - by GPT -->
+    <script>
+        // Função para inicializar o efeito VanillaTilt em um elemento específico
+        function initVanillaTilt(element) {
+            VanillaTilt.init(element, {
+                max: 25,
+                speed: 400
+            });
+        }
+
+        // Selecione a div pai que você deseja observar
+        const playersCarousel = document.querySelector('.players--carousel');
+
+        // Adicione um event listener à div pai para capturar eventos de adição de nós
+        playersCarousel.addEventListener('DOMNodeInserted', (event) => {
+            // Verifique se o nó adicionado é uma div com a classe '.player'
+            if (event.target && event.target.nodeType === 1 && event.target.classList.contains('player')) {
+                // Inicialize o efeito VanillaTilt para o novo elemento adicionado
+                initVanillaTilt(event.target);
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
