@@ -78,7 +78,7 @@ button:active {
 
 .players--carousel {
 	max-width: 100%;
-	flex-wrap: wrap;
+	flex-wrap: wrap-reverse;
 	height: 100%;
 	display: flex;
 	align-items: stretch;
