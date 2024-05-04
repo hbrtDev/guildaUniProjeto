@@ -5,8 +5,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	scroll-behavior: smooth;
-	overflow: hidden;
+	scroll-behavior: smooth;
 }
 
 main {
